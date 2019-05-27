@@ -72,8 +72,13 @@ public class Application {
             if (inputStr.equals("0") || inputStr2.equals("0")) {
                 runnig = false;
             }
+            else{
+                    System.out.println("Выход из программы\n");
+                    runnig = false;
+            }
         }
     }
 }
+
 
 
