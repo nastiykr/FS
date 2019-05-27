@@ -2,15 +2,18 @@ package ru.task;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import lombok.val;
 import org.apache.commons.io.IOUtils;
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.loader.SchemaLoader;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 
@@ -19,7 +22,7 @@ public class Application {
 
     //для проверки валидности модели при помощи JSONSchema(everit)
     private static Schema loadSchema() throws IOException{
-        try (InputStream inputStream = Application.class.getResourceAsStream("/schema.json")) {
+        try (InputStream inputStream = Application.class.getResourceAsStream("/schema2.json")) {
             JSONObject rawSchema = new JSONObject(new JSONTokener(inputStream));
             return SchemaLoader.load(rawSchema);
         }
@@ -33,33 +36,37 @@ public class Application {
         //загрузили схему
         Schema schema = loadSchema();
 
+        //TypeReference itemsArrType = TypeReference<List<Animal>>(){};
+        Type itemsArrType = new TypeToken<Animal[]>() {}.getType();
+
         //загрузили файл для проверки
-        val inputJson1 = IOUtils.resourceToString("/json1.json", Charset.defaultCharset());
-        //val inputJson2 = IOUtils.resourceToString("/json2.json", Charset.defaultCharset());
+        String inputJson1 = IOUtils.resourceToString("/json1.json", Charset.defaultCharset());
+        String inputJson2 = IOUtils.resourceToString("/json2.json", Charset.defaultCharset());
 
         //проверка файла на соответствие схеме
-        schema.validate(new JSONObject(inputJson1));
-        //schema.validate(new JSONObject(inputJson2));
+        schema.validate(new JSONArray(inputJson1));
+        schema.validate(new JSONArray(inputJson2));
 
         //десериализация JSON в объект
-        Animal kot1 = GSON.fromJson(inputJson1, Animal.class);
+        Animal[] kot1 = GSON.fromJson(inputJson1, itemsArrType);
+        Animal[] kot2 = GSON.fromJson(inputJson2, itemsArrType);
+
+
         System.out.println("********************************************");
-        System.out.println("Дессериализация модели \n" + kot1);
+        System.out.println("Model deserialization \n" + Arrays.toString(kot1));
         System.out.println("********************************************");
         //сериализация объекта в JSON в pretty-формате
         String outJson1 = GSON.toJson(kot1);
-        System.out.println("Сериализация модели \n" + outJson1);
+        System.out.println("Model serialization \n" + outJson1);
         System.out.println("********************************************");
-/*
-        //десериализация JSON в объект
-        Animal kot2 = GSON.fromJson(inputJson2, Animal.class);
-        System.out.println("Дессериализация модели \n" + kot2);
+
+        System.out.println("Model deserialization \n" + Arrays.toString(kot2));
         System.out.println("********************************************");
         //сериализация объекта в JSON в pretty-формате
         String outJson2 = GSON.toJson(kot2);
-        System.out.println("Сериализация модели \n" + outJson2);
+        System.out.println("Model serialization \n" + outJson2);
         System.out.println("********************************************");
-*/
+
 
 /*
 

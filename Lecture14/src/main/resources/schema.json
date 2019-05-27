@@ -27,7 +27,7 @@
     "has_tail": {
       "type": "boolean"
     },
-    "cat_friends": {
+    "friends": {
       "type": "object",
       "properties": {
         "count": {
