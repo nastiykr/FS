@@ -16,8 +16,8 @@ public class Application {
         dictEngRu.put("hello", "привет");
         dictEngRu.put("book", "книга");
         dictEngRu.put("apple", "яблоко");
-        dictRuEng.put("time", "время");
-        dictRuEng.put("day", "день");
+        dictEngRu.put("time", "время");
+        dictEngRu.put("day", "день");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -72,8 +72,13 @@ public class Application {
             if (inputStr.equals("0") || inputStr2.equals("0")) {
                 runnig = false;
             }
+            else{
+                    System.out.println("Выход из программы\n");
+                    runnig = false;
+            }
         }
     }
 }
+
 
 
