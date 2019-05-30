@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+group 'ru.company'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.cucumber:cucumber-java:4.3.1'
+    compile 'io.cucumber:cucumber-junit:4.3.1'
+    compile 'junit:junit:4.12'
+
+    compile 'org.projectlombok:lombok:1.18.8'
+}
+
+task cucumber() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "cucumber.api.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
+        }
+    }
+}
