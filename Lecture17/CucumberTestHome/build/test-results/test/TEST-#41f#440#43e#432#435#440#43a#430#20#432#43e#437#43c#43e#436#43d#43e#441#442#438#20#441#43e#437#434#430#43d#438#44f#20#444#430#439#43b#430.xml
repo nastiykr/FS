@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Проверка возможности создания файла" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-05-31T10:38:33" hostname="TD082" time="0.01">
+<testsuite name="Проверка возможности создания файла" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-05-31T10:40:17" hostname="TD082" time="0.01">
   <properties/>
-  <testcase name="проверка создания файла" classname="Проверка возможности создания файла" time="0.01"/>
-  <system-out><![CDATA[Дано. Имя файла для создания  = file.txt
+  <testcase name="проверка создания файла" classname="Проверка возможности создания файла" time="0.008"/>
+  <testcase name="проверка создания файла" classname="Проверка возможности создания файла" time="0.002"/>
+  <system-out><![CDATA[Дано. Имя файла для создания  = file1.txt
+?[32m.?[0mКогда. Файл создан
+?[32m.?[0mТогда. Проверка существования файла
+?[32m.?[0mДано. Имя файла для создания  = file2.txt
 ?[32m.?[0mКогда. Файл создан
 ?[32m.?[0mТогда. Проверка существования файла
 ?[32m.?[0m]]></system-out>
