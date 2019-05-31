@@ -24,15 +24,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/resources/base_sample.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -44,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SomeFileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="51">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,12 +77,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SomeFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="262">
+              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#229#230#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Hooks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="82" />
+              <folding>
+                <element signature="e#124#125#0" expanded="true" />
+                <element signature="e#205#206#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,7 +110,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/CucumberRunner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -133,17 +137,18 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/CucumberRunner.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestContext.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/base_sample.feature" />
+        <option value="$PROJECT_DIR$/src/main/java/Hooks.java" />
         <option value="$PROJECT_DIR$/src/main/java/SomeFile.java" />
         <option value="$PROJECT_DIR$/src/test/java/SomeFileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/base_sample.feature" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="235" />
+    <option name="y" value="181" />
+    <option name="width" value="1553" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -312,49 +317,50 @@
       <option name="presentableId" value="Default" />
       <updated>1559244837117</updated>
       <workItem from="1559244839950" duration="10053000" />
-      <workItem from="1559288133965" duration="4232000" />
+      <workItem from="1559288133965" duration="8633000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 30m 10s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 15h 25m 16s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 32m 20s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 15h 28m 31s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 35m 03s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 15h 28m 55s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 37m 40s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 15h 29m 13s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 37m 53s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 15h 55m 53s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 38m 02s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 15h 57m 34s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 38m 18s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 15h 59m 57s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 38m 33s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 16h 00m 28s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 40m 01s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 16h 03m 40s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CucumberRunner - 2019.05.31 at 13h 40m 17s.xml">
+    <history-entry file="CucumberRunner - 2019.05.31 at 16h 04m 09s.xml">
       <configuration name="CucumberRunner" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14285000" />
+    <option name="totallyTimeSpent" value="18686000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23187633" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29194632" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -363,7 +369,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4127844" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19971672" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40638766" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,12 +421,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CucumberRunner.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="207">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2631#2632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/base_sample.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Hooks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="82" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -432,42 +462,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/nio/file/Files.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="e#2631#2632#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SomeFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="262">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SomeFileTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/base_sample.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/java/CucumberRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

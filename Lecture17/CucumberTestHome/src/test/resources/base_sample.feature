@@ -9,6 +9,6 @@
     Тогда filePath создан
 
     Примеры:
-      | Before |
+      | Before    |
       | file1.txt |
       | file2.txt |
