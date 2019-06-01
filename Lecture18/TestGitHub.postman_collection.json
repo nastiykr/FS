@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "773bc0e4-1d87-47c9-8184-c7a9cb6f1d57",
+		"name": "TestGitHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Получения списка репозиториев",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "queryParams",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "*****",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:owner/repos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":owner",
+						"repos"
+					],
+					"variable": [
+						{
+							"key": "owner",
+							"value": "nastiykr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание репозитория myFirstRepo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d0d10193-646f-489c-8bce-da8399e89352",
+						"exec": [
+							"tests[\"private is present\"] = responseBody.has(\"private\");",
+							"",
+							"pm.test(\"Status is nested\", function(){",
+							"    pm.response.to.be.nested;",
+							"});",
+							"",
+							"pm.test(\"Response is json\", function(){",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"//сохраняем имя созданного репозитория в переменную",
+							"pm.test(\"Create variable repoName\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.globals.set(\"repoName\", jsonData.name);    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "*****",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "queryParams",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"name\": \"myFirstRepo\", \r\n\"description\": \"This is your first repository\"\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/repos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение репозитория myFirstRepo",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "queryParams",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": '*****",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/repos/:owner/:repo",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						":owner",
+						":repo"
+					],
+					"variable": [
+						{
+							"key": "owner",
+							"value": "nastiykr"
+						},
+						{
+							"key": "repo",
+							"value": "myFirstRepo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление репозитория myFirstRepo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28f0023b-fb10-4125-bed9-a47dae09d9b4",
+						"exec": [
+							"pm.test('Status code is 201',",
+							"    function() {",
+							"        pm.response.to.have.status(204);",
+							"    }",
+							");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "*****",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "queryParams",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/:repo",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						":repo"
+					],
+					"variable": [
+						{
+							"key": "repo",
+							"value": "myFirstRepo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление репозитория myFirstRepo (2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28f0023b-fb10-4125-bed9-a47dae09d9b4",
+						"exec": [
+							"pm.test('Status code is 201',",
+							"    function() {",
+							"        pm.response.to.have.status(204);",
+							"    }",
+							");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "*****",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "queryParams",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/repos/nastiykr/{{repoName}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"nastiykr",
+						"{{repoName}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "raer2Thi",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "nastiykr",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "49696307-488f-42aa-a00b-fc1e0cc3407a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5a721786-02dd-46ae-a586-f0d5bf475a9e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
