@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+    def postgresVersion = '42.2.5'
+    def junitVersion = '5.4.2'
+    def assertjVersion = '3.12.2'
+    def commonsIoVersion = '2.5'
+
+    compile "commons-io:commons-io:$commonsIoVersion"
+
+    compile group: 'org.postgresql', name: 'postgresql', version: postgresVersion
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.4.6'
+
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: junitVersion
+    testCompile "org.assertj:assertj-core:$assertjVersion"
+}
+
