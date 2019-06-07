@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+}
+
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+task newSample {
+    doLast {
+        println 'Sample task'
+    }
+}
+
+task runApp (dependsOn: 'classes', type: JavaExec) {
+    main = 'ru.cft.Application'
+    classpath = sourceSets.main.runtimeClasspath
+    args 100, 3
+}
+
+test {
+    useJUnitPlatform() {}
+}
+
+task junitTest (type: Test) {
+    useJUnitPlatform() {}
+}
+
+task testSuite (type: Test) {
+    useJUnitPlatform() {}
+
+    filter {
+        //includeTestsMatching "ru.cft.JunitTest"
+        //includeTestsMatching "ru.cft.JunitTestOrder"
+        includeTestsMatching "ru.cft.*"
+    }
+}
+
+dependencies {
+    def junitVersion = '5.4.2'
+
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: junitVersion
+}
