@@ -1,0 +1,10 @@
+CREATE PROCEDURE pSalary(emp_id number, nSalary number) AS
+BEGIN
+UPDATE hr.employees set salary = nSalary WHERE employee_id = emp_id;
+END;
+
+---
+
+BEGIN
+pSalary(100, 25000);
+END;
