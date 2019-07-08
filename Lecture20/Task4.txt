@@ -1,0 +1,32 @@
+DECLARE
+
+nEmpID hr.EMPLOYEES.Employee_id%TYPE := &Номер_сотрудника;
+nOldSalary hr.employees.salary%Type;
+nNewSalary hr.Employees.SALARY%Type;
+sFirstName hr.EMPLOYEES.first_name%Type;
+sLastName hr.employees.Last_Name%Type;
+dHireDate hr.employees.HIRE_DATE%type;
+nYears number(4,0);
+
+BEGIN
+
+SELECT salary into nOldSalary from hr.employees where employee_id = nEmpId;
+SELECT first_name into sFirstName from hr.employees where employee_id = nEmpId;
+SELECT last_name into sLastName from hr.employees where employee_id = nEmpId;
+SELECT hire_date into dHireDate from hr.employees where employee_id = nEmpId;
+nYears := MONTHS_BETWEEN(SYSDATE, dHireDate)/12;
+
+CASE
+
+WHEN nYears >= 15 THEN nNewSalary := nOldSalary*1.15;
+WHEN nYears >= 10 THEN nNewSalary := nOldSalary*1.10;
+ELSE nNewSalary := nOldSalary*1.05;
+
+END CASE;
+
+UPDATE hr.employees SET SALARY = nNewSalary WHERE employee_id = nEmpID;
+commit;
+DBMS_OUTPUT.PUT_LINE('Номер сотрудника: ' || nEmpID || '  Имя и фамилия: ' || sFirstName || ' ' || sLastName || '  Проработано лет: ' || nYears);
+DBMS_OUTPUT.PUT_LINE('Старая зарплата: ' || nOldSalary || '  Новая зарплата: ' || nNewSalary);
+
+END;

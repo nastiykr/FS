@@ -1,0 +1,39 @@
+Request method:	POST
+FRequest URI:	https://api.github.com/repos/nastiykr/my_issue_1/issues
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+$Headers:		Authorization=Basic Og==
+				Accept=*/*
+1				Content-Type=text/plain; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{{"title":"my_title_1","body":"my_body_1","milestone":null,"locked":false,"labels":["a","b","c"],"assignees":["nastiykr"]}
+HTTP/1.1 404 Not Found
+%Date: Fri, 07 Jun 2019 23:41:12 GMT
+/Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Server: GitHub.com
+Status: 404 Not Found
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 57
+X-RateLimit-Reset: 1559954423
+-X-GitHub-Media-Type: github.v3; format=json
+ÜAccess-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type
+ Access-Control-Allow-Origin: *
+IStrict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+!X-Content-Type-Options: nosniff
+!X-XSS-Protection: 1; mode=block
+LReferrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+-Content-Security-Policy: default-src 'none'
+Content-Encoding: gzip
+9X-GitHub-Request-Id: E7F2:5CE6:4D9378A:615106B:5CFAF618
+
+{
+    "message": "Not Found",
+S    "documentation_url": "https://developer.github.com/v3/issues/#create-an-issue"
+}

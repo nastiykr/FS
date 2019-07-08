@@ -1,0 +1,12 @@
+CREATE FUNCTION fSalary(emp_id IN number) RETURN number
+is nSalary number(10,2);
+BEGIN
+SELECT salary into nSalary from employees where employee_id = emp_id;
+RETURN nSalary;
+END;
+
+---
+
+BEGIN
+dbms_output.put_line(fSalary(101));
+END;
